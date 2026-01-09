@@ -62,6 +62,7 @@
 					<ondown>noop</ondown>
 					<onclick>Dialog.Close(1126)</onclick>
 					<onclick condition="String.IsEqual(Window(Home).Property(CustomConfirm),cleanlibrary)">CleanLibrary(video)</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(CustomConfirm),cleanmusiclibrary)">CleanLibrary(music)</onclick>
 					<include condition="String.IsEqual(Window(Home).Property(CustomConfirm),SiLVOcolors)">SetPresetSiLVOTheme</include>
 					<include condition="String.IsEqual(Window(Home).Property(CustomConfirm),bluecolors)">SetPresetBlueTheme</include>
 					<include condition="String.IsEqual(Window(Home).Property(CustomConfirm),orangecolors)">SetPresetOrangeTheme</include>

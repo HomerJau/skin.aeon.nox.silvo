@@ -415,6 +415,13 @@
 						<altlabel>13353</altlabel>
 						<usealttexture>library.isscanningmusic</usealttexture>
 					</control>
+					<control type="button" id="2099">
+						<description>Clean music library</description>
+						<include>ButtonCommonValues</include>
+						<label>$LOCALIZE[14247]</label>
+						<onclick>SetProperty(CustomConfirm,cleanmusiclibrary,Home)</onclick>
+						<onclick>ActivateWindow(1126)</onclick>
+					</control>
 					<control type="button" id="612">
 						<description>Go to playlist</description>
 						<include>ButtonCommonValues</include>

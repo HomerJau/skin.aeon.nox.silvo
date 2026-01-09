@@ -116,11 +116,13 @@
 	</variable>
 	<variable name="CustomConfirmHeaderLabelVar">
 		<value condition="String.IsEqual(Window(Home).Property(CustomConfirm),cleanlibrary)">$LOCALIZE[313]</value>
+		<value condition="String.IsEqual(Window(Home).Property(CustomConfirm),cleanmusiclibrary)">$LOCALIZE[313]</value>
 		<value>$LOCALIZE[14117]</value>
 		<!-- <value>$VAR[BackgroundLabelVar] $LOCALIZE[14117]</value> -->
 	</variable>
 	<variable name="CustomConfirmTextboxVar">
 		<value condition="String.IsEqual(Window(Home).Property(CustomConfirm),cleanlibrary)">$LOCALIZE[333]</value>
+		<value condition="String.IsEqual(Window(Home).Property(CustomConfirm),cleanmusiclibrary)">$LOCALIZE[333]</value>
 		<value condition="String.IsEqual(Window(Home).Property(CustomConfirm),resetcolors)">$LOCALIZE[31495]</value>
 		<value condition="String.EndsWith(Window(Home).Property(CustomConfirm),colors)">$LOCALIZE[31525]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(ResetSkinSettings))">$LOCALIZE[31398]</value>
