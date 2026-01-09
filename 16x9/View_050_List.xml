@@ -1,5 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+   <!-- QQ Special Edition Kodi Album Codec Logos  - THESE 3 Variables are used in the Album lists -->
+	<variable name="QQGetLogoFromFileNameAndPathvar">
+        <!-- New MusicCodec Codecs -->
+        <value  condition="String.IsEqual(ListItem.MusicCodec,eac3_ddp_atmos)">QQLogos/atmos.png</value>
+		<value  condition="String.IsEqual(ListItem.MusicCodec,truehd_atmos)">QQLogos/dolbyatmos.png</value>
+        <!--  <value  condition="String.IsEqual(ListItem.MusicCodec,truehd_atmos)">QQLogos/BDA.png</value>  -->
+		<value  condition="String.IsEqual(ListItem.MusicCodec,dtshd_ma_x)">QQLogos/dtsx.png</value>
+		<value  condition="String.IsEqual(ListItem.MusicCodec,dtshd_ma)">QQLogos/dtshdma.png</value>
+		<value  condition="String.IsEqual(ListItem.MusicCodec,dtshd_hra)">QQLogos/dtshd_hra.png</value>
+		<value  condition="String.IsEqual(ListItem.MusicCodec,dts_96_24)">QQLogos/dts9624.png</value>
+		<value  condition="String.IsEqual(ListItem.MusicCodec,dca)">QQLogos/dts.png</value>
+		<value  condition="String.IsEqual(ListItem.MusicCodec,truehd)">QQLogos/truehd.png</value>
+		<value  condition="String.IsEqual(ListItem.MusicCodec,eac3)">QQLogos/eac3.png</value>
+		<value  condition="String.IsEqual(ListItem.MusicCodec,dolbydigital)">QQLogos/dolbydigital.png</value>
+		<value  condition="String.IsEqual(ListItem.MusicCodec,ac3)">QQLogos/dolbydigital.png</value>
+		<!-- New FileNameAndPath Name Codecs-->
+		<value  condition="String.Contains(ListItem.FileNameAndPath,DVDA UM)">QQLogos/upmix.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,SACD UM)">QQLogos/upmix.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,SACD)">QQLogos/SACD.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,DVDA)">QQLogos/mlp.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,DVD-A)">QQLogos/mlp.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,DTS 9624)">QQLogos/dts9624.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,DTS9624)">QQLogos/dts9624.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,ADVD)">QQLogos/DVDV.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,DVDV)">QQLogos/DVDV.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,DVD-V)">QQLogos/DVDV.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,360)">QQLogos/360.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,Quadio">QQLogos/BDA.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,Quad BDA)">QQLogos/BDA.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,Quad SQ)">QQLogos/QuadSQ.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,Quad Q8)">QQLogos/QuadQ8.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,Quad QR)">QQLogos/QuadQR.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,Quad Reel)">QQLogos/QuadQR.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,Quad QS)">QQLogos/QuadQS.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,Quad CD4)">QQLogos/QuadCD4.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,Quad Q4)">QQLogos/QuadQ4.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,Quadradisc)">QQLogos/quadradisc.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,Penteo)">QQLogos/penteo.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,Upmix)">QQLogos/upmix.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,/Quad)">QQLogos/quadraphonic.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,BDA)">QQLogos/BDA.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,BDV)">QQLogos/BDA.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,Multitrack)">QQLogos/multitrack.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,DTSX)">QQLogos/dtsx.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,DTS-CD)">QQLogos/dts.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,DTSCD)">QQLogos/dts.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,DTS CD)">QQLogos/dts.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,DTSDVD)">QQLogos/dts.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,Dolby DVD)">QQLogos/dolbydigital.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,DTS DVD)">QQLogos/dts.png</value>
+        <value  condition="String.IsEqual(ListItem.MusicChannels,2) + String.IsEqual(ListItem.MusicBitsPerSample,24)">QQLogos/HiresAudio.png</value>
+        <value  condition="String.IsEqual(ListItem.MusicChannels,2) + String.IsEqual(ListItem.MusicBitsPerSample,16)">QQLogos/CDlogo.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,DSF)">QQLogos/DSDsmall.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,.flac)">QQLogos/flac.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,.dsf)">QQLogos/DSDsmall.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,DSD)">QQLogos/DSDsmall.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,.dsd)">QQLogos/DSDsmall.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,MP3)">QQLogos/mp3.png</value>
+		<value  condition="String.Contains(ListItem.FileNameAndPath,.mp3)">QQLogos/mp3.png</value>
+		<value  condition="String.IsEqual(ListItem.MusicCodec,flac)">QQLogos/flac.png</value>
+		<value  condition="String.Contains(ListItem.MusicCodec,pcm)">QQLogos/pcm.png</value>
+	</variable>
+	<variable name="QQGetSampleRatesEtcvar">
+        <!-- TESTING <value>$INFO[ListItem.MusicCodec]</value> -->
+		<value  condition="String.Contains(ListItem.MusicCodec,eac3)">($INFO[ListItem.Samplerate] kHz 16 bit)</value>
+        <value  condition="String.Contains(ListItem.MusicCodec,truehd)">($INFO[ListItem.Samplerate] kHz 24 bit)</value>
+        <value  condition="String.IsEqual(ListItem.Samplerate,) + String.IsEqual(ListItem.MusicBitsPerSample,)"></value>
+		<value>($INFO[ListItem.Samplerate] kHz $INFO[ListItem.MusicBitsPerSample] bit)</value>
+	</variable>
+	<!-- QQ Special Edition Kodi Album Codec Logos -->
+	
 	<!-- Video List -->
 	<include name="VideoList">
 		<control type="group">
@@ -1276,7 +1347,7 @@
 						</control>
 						<control type="label">
 							<left>135</left>
-							<width>50</width>
+							<width>40</width>
 							<height>72</height>
 							<font>IconMediaMenuButtons</font>
 							<textcolor>grey2</textcolor>
@@ -1285,7 +1356,7 @@
 						</control>
 						<control type="label">
 							<left>135</left>
-							<width>835</width>
+							<width>985</width>
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>grey2</textcolor>
@@ -1369,7 +1440,7 @@
 						</control>
 						<control type="label">
 							<left>135</left>
-							<width>50</width>
+							<width>40</width>
 							<height>72</height>
 							<font>IconMediaMenuButtons</font>
 							<label></label>
@@ -1377,7 +1448,7 @@
 						</control>
 						<control type="label">
 							<left>135</left>
-							<width>835</width>
+							<width>985</width>
 							<height>70</height>
 							<font>font30</font>
 							<label>$VAR[MusicListLabel3Var]</label>
@@ -1653,19 +1724,19 @@
 				</control>
 			</control>
 			<control type="group" id="8001">
-				<left>1263</left>
-				<top>-44</top>
+				<left>1280</left>
+				<top>-40</top>
 				<visible>Container.Content(playlists)</visible>
 				<animation effect="fade" time="250">Visible</animation>
 				<include content="BackPanel">
 					<param name="left">27</param>
-					<param name="top">176</param>
-					<param name="width">526</param>
-					<param name="height">848</param>
-					<param name="texture">colors/black90.png</param>
+					<param name="top">148</param>
+					<param name="width">570</param>
+					<param name="height">904</param>
+					<param name="texture">colors/black75.png</param>
 				</include>
 				<control type="scrollbar" id="95063">
-					<left>537</left>
+					<left>540</left>
 					<top>180</top>
 					<width>12</width>
 					<height>840</height>
@@ -1768,7 +1839,7 @@
 					<param name="top">175</param>
 					<param name="width">1170</param>
 					<param name="height">850</param>
-					<param name="texture">colors/black90.png</param>
+					<param name="texture">colors/black75.png</param>
 				</include>
 				<control type="panel" id="50">
 					<top>180</top>
@@ -2656,24 +2727,25 @@
 			</control>
 		</control>
 	</include>
-	<!-- Slim MusicList-->
 	<include name="SlimMusicList">
 		<control type="group">
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
 			<include>ViewAnimation</include>
 			<control type="group">
-				<left>100</left>
+				<left>60</left>
 				<top>-40</top>
 				<control type="image">
 					<left>-32</left>
 					<top>148</top>
-					<width>1204</width>
+					<!-- <width>1204</width>  -->
+					<width>1374</width>
 					<height>904</height>
-					<texture border="40">listpanel_back.png</texture>
+					<texture border="40">thumbs/diffuse_music3.png</texture>
 				</control>
 				<control type="panel" id="50">
 					<top>180</top>
-					<width>1140</width>
+					<!-- <width>1140</width> -->
+					<width>1370</width>
 					<height>840</height>
 					<onleft>SetProperty(MediaMenu,True,Home)</onleft>
 					<onleft>SetFocus(9050)</onleft>
@@ -2683,20 +2755,50 @@
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>95060</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
-					<itemlayout height="60" width="1140" condition="Container.Content(albums) | Container.Content(songs)">
-						<control type="image">
+					<itemlayout height="60" width="1450" condition="Container.Content(albums)">
+						<control type="label">
 							<left>5</left>
-							<top>5</top>
-							<width>180</width>
-							<height>50</height>
-							<aspectratio align="right">keep</aspectratio>
-							<texture fallback="flags/rating/empty.png">$INFO[ListItem.UserRating,flags/rating/,.png]</texture>
-							<colordiffuse>grey3</colordiffuse>
-							<visible>!ListItem.IsParentFolder</visible>
+							 <!-- <top>5</top>  -->
+                                                        <width>380</width> 
+							 <!-- <width>1050</width>  -->
+							<height>60</height>
+							<font>font14</font>
+							<textcolor>grey2</textcolor>
+                                                        <label>$INFO[ListItem.AlbumArtist]</label> 
+							 <!-- <label>(ListItem.FileNameAndPath</label>    -->
 						</control>
 						<control type="label">
-							<left>200</left>
+							<left>400</left>
+							<width>700</width>
+							<height>60</height>
+							<font>font14</font>
+							<textcolor>grey2</textcolor>
+                                                        <label>$INFO[ListItem.Label]</label> 							
+						</control>
+						<control type="label">
+							<left>250</left>
 							<width>900</width>
+							<height>60</height>
+							<font>font14</font>
+							<align>right</align>
+							<textcolor>grey2</textcolor>
+                                                        <!-- <label>$INFO[ListItem.Label2]</label>   -->
+							<label>$VAR[QQGetCodecFromFileNameAndPathvar]</label>
+						</control>
+                                                <control type="image">
+							<left>1200</left>
+							<width>100</width>
+							<height>54</height>
+							<colordiffuse>white</colordiffuse>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture fallback="empty.png">$VAR[QQGetLogoFromFileNameAndPathvar]</texture>
+						</control>
+					</itemlayout>
+					<itemlayout height="60" width="1140" condition="Container.Content(songs)">
+						<control type="label">
+							<left>5</left>
+							<top>5</top>
+							<width>1075</width>
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey2</textcolor>
@@ -2712,26 +2814,61 @@
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="60" width="1140" condition="Container.Content(albums) | Container.Content(songs)">
+					<focusedlayout height="60" width="1140" condition="Container.Content(albums)">
 						<control type="image">
-							<width>1140</width>
+							<width>1310</width>
 							<height>60</height>
-							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">colors/white50.png</texture>
+							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
-						<control type="image">
+						<control type="label">
 							<left>5</left>
-							<top>5</top>
-							<width>180</width>
-							<height>50</height>
-							<aspectratio align="right">keep</aspectratio>
-							<texture fallback="flags/rating/empty.png">$INFO[ListItem.UserRating,flags/rating/,.png]</texture>
-							<visible>!ListItem.IsParentFolder</visible>
+							<!-- <top>5</top>  -->
+							<width>380</width>
+							<height>60</height>
+							<font>font15</font>
+							<!-- <textcolor>grey2</textcolor> -->
+							<label>$INFO[ListItem.AlbumArtist]</label>
 						</control>
 						<control type="label">
-							<left>200</left>
+							<left>400</left>
+							<width>700</width>
+							<height>60</height>
+							<font>font15</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>250</left>
 							<width>900</width>
+							<height>60</height>
+							<font>font15</font>
+							<align>right</align>
+							<!-- <textcolor>grey2</textcolor> -->
+                                                        <!-- <label>$INFO[ListItem.Label2]</label>   -->
+							<label>$VAR[QQGetCodecFromFileNameAndPathvar]</label>
+						</control>
+                                                <control type="image">
+							<left>1200</left>
+							<width>100</width>
+							<height>54</height>
+							<colordiffuse>white</colordiffuse>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture fallback="empty.png">$VAR[QQGetLogoFromFileNameAndPathvar]</texture>
+						</control>
+					</focusedlayout>
+					<focusedlayout height="60" width="1140" condition="Container.Content(songs)">
+						<control type="image">
+							<width>1140</width>
+							<height>60</height>
+							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
+							<visible>Control.HasFocus(50)</visible>
+							<include>VisibleFadeAnimation</include>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>5</top>
+							<width>1075</width>
 							<height>60</height>
 							<font>font15</font>
 							<label>$INFO[ListItem.Label]</label>
@@ -2768,7 +2905,7 @@
 						<control type="image">
 							<width>1140</width>
 							<height>60</height>
-							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">colors/white50.png</texture>
+							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -2790,7 +2927,7 @@
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="95060">
-					<left>1142</left>
+					<left>1322</left>
 					<top>180</top>
 					<width>12</width>
 					<height>840</height>
@@ -2806,11 +2943,11 @@
 				</control>
 			</control>
 			<control type="group">
-				<left>1296</left>
-				<top>155</top>
+				<left>1420</left>
+				<top>332</top>
 				<control type="image">
-					<width>570</width>
-					<height>835</height>
+					<width>480</width>
+					<height>700</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture background="true">$VAR[PosterThumb]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
@@ -2818,13 +2955,22 @@
 					<bordersize>20</bordersize>
 				</control>
 				<control type="image">
-					<top>795</top>
-					<width>570</width>
-					<height>835</height>
+					<top>660</top>
+					<width>480</width>
+					<height>100</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true">$VAR[PosterThumb]</texture>
 					<bordersize>20</bordersize>
+				</control>
+				<control type="label">
+					<top>680</top>
+					<width>500</width>
+					<height>45</height>
+					<font>font12</font>
+                                        <align>center</align>
+					<textcolor>grey2</textcolor>
+					<label>$INFO[ListItem.Year]   $VAR[QQGetSampleRatesEtcvar]</label>
 				</control>
 			</control>
 		</control>

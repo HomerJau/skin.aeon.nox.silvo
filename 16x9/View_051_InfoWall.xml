@@ -279,7 +279,7 @@
 				<top>148</top>
 				<width>1640</width>
 				<height>964</height>
-				<texture border="40">listpanel_back.png</texture>
+				<texture border="40">thumbs/diffuse_music3.png</texture>
 				<visible>!Skin.HasSetting(Enable.AlternateInfowall)</visible>
 			</control>
 			<control type="panel" id="51">
@@ -300,21 +300,25 @@
 				<viewtype label="$LOCALIZE[31247]">icon</viewtype>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(addons)</visible>
-				<itemlayout height="300" width="300" condition="Container.Content(albums) | [Window.IsActive(music) + Container.Content(files) + Container.Content(albums)]">
+				<itemlayout height="400" width="300" condition="Container.Content(albums) | [Window.IsActive(music) + Container.Content(files) + Container.Content(albums)]">
 					<control type="image">
 						<width>300</width>
 						<height>300</height>
 						<aspectratio>scale</aspectratio>
 						<texture border="2" background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="2" infill="false">colors/black.png</bordertexture>
+						<bordertexture border="2" infill="false">thumbs/diffuse_music3.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
-					<control type="image">
+					<control type="button">
+						<top>310</top>
 						<width>300</width>
-						<height>300</height>
-						<texture border="2">colors/black25.png</texture>
-						<bordersize>2</bordersize>
-					</control>
+                        <height>90</height>
+						<label>$VAR[FloorLabelVar]</label>
+						<include>DefaultButtonsValues</include>
+						<visible>Container.Content(albums)</visible>
+			        </control>
+                    <!--  $VAR[FloorLabelVar] -->
+					<!--  $INFO[ListItem.Property(Album_Label)] -->
 				</itemlayout>
 				<focusedlayout height="300" width="300" condition="Container.Content(albums) | [Window.IsActive(music) + Container.Content(files) + Container.Content(albums)]">
 					<control type="group">
@@ -326,32 +330,34 @@
 							<width>300</width>
 							<height>300</height>
 							<aspectratio>scale</aspectratio>
-							<texture border="8" background="true">$INFO[ListItem.Icon]</texture>
-							<bordersize>8</bordersize>
-							<bordertexture border="8" infill="false" colordiffuse="$VAR[HighlightBarColor]">colors/white.png</bordertexture>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture colordiffuse="$VAR[ThemeLabelColor]" border="8">thumbs/thumbnail_focused.png</bordertexture>
+							<bordersize>6</bordersize>
+						</control>
+						<control type="button">
+							<top>310</top>
+							<width>300</width>
+							<height>90</height>
+							<label>$VAR[FloorLabelVar]</label>
+							<include>DefaultButtonsValues</include>
+							<visible>Container.Content(albums)</visible>
 						</control>
 					</control>
 				</focusedlayout>
-				<itemlayout height="300" width="300" condition="Container.Content(artists) | [Window.IsActive(music) + Container.Content(files) + Container.Content(artists)]">
+				<itemlayout height="400" width="300" condition="Container.Content(artists) | [Window.IsActive(music) + Container.Content(files) + Container.Content(artists)]">
 					<control type="image">
 						<width>300</width>
 						<height>300</height>
 						<aspectratio>scale</aspectratio>
-						<texture border="2" background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 						<bordersize>2</bordersize>
-						<bordertexture border="2" infill="false">colors/black.png</bordertexture>
+						<colordiffuse>BAffffff</colordiffuse>
 					</control>
 					<control type="image">
 						<width>300</width>
 						<height>300</height>
-						<texture border="2">colors/black25.png</texture>
-						<bordersize>2</bordersize>
-					</control>
-					<control type="image">
-						<top>250</top>
-						<width>300</width>
-						<height>50</height>
-						<texture>colors/black50.png</texture>
+						<texture>logo_back.png</texture>
 						<bordersize>2</bordersize>
 					</control>
 					<control type="label">
@@ -374,9 +380,28 @@
 							<width>300</width>
 							<height>300</height>
 							<aspectratio>scale</aspectratio>
-							<texture border="8" background="true">$INFO[ListItem.Icon]</texture>
-							<bordersize>8</bordersize>
-							<bordertexture border="8" infill="false" colordiffuse="$VAR[HighlightBarColor]">colors/white.png</bordertexture>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture colordiffuse="$VAR[ThemeLabelColor]" border="8">thumbs/thumbnail_focused.png</bordertexture>
+							<bordersize>6</bordersize>
+						</control>
+						<control type="group">
+							<animation effect="fade" start="100" end="0" reversible="false">Focus</animation>
+							<animation effect="fade" start="0" end="100" reversible="false">UnFocus</animation>
+							<control type="image">
+								<width>300</width>
+								<height>300</height>
+								<texture>logo_back.png</texture>
+								<bordersize>8</bordersize>
+							</control>
+							<control type="label">
+								<top>260</top>
+								<width>300</width>
+								<height>30</height>
+								<align>center</align>
+								<textoffsetx>15</textoffsetx>
+								<textcolor>grey2</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
 						</control>
 					</control>
 				</focusedlayout>

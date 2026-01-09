@@ -405,7 +405,8 @@
 							<visible>!String.IsEmpty(ListItem.SampleRate)</visible>
 						</item>
 						<item>
-							<label>$INFO[ListItem.MusicChannels]</label>
+							<!-- <label>$INFO[ListItem.MusicChannels]</label> -->
+							<label>$VAR[QQGetCodecFromFileNameAndPathvar]</label> 
 							<label2>$LOCALIZE[10127]:</label2>
 							<onclick>SetProperty(MoreInfoTitle,$LOCALIZE[10127])</onclick>
 							<onclick>SetProperty(MoreInfoContent,$ESCINFO[ListItem.MusicChannels])</onclick>
