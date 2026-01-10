@@ -38,7 +38,7 @@
 		<value condition="String.Contains(Player.Folderpath,DVDV)">QQLogos/DVDV.png</value>
 		<value condition="String.Contains(Player.Folderpath,DVD-V)">QQLogos/DVDV.png</value>
 		<value condition="String.Contains(Player.Folderpath,360)">QQLogos/360.png</value>
-		<value condition="String.Contains(Player.Folderpath,Quadio">QQLogos/BDA.png</value>
+		<value condition="String.Contains(Player.Folderpath,Quadio)">QQLogos/BDA.png</value>
 		<value condition="String.Contains(Player.Folderpath,Quad BDA)">QQLogos/BDA.png</value>
 		<value condition="String.Contains(Player.Folderpath,Quad SQ)">QQLogos/QuadSQ.png</value>
 		<value condition="String.Contains(Player.Folderpath,Quad Q8)">QQLogos/QuadQ8.png</value>
@@ -77,7 +77,7 @@
   		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)">Atmos DD+</value>
   		<value condition="String.IsEqual(VideoPlayer.AudioCodec,truehd_atmos)">Atmos THD</value>
   		<value condition="String.Contains(VideoPlayer.AudioCodec,dtshd_ma_x)">DTS:X</value>		
-		<value condition="String.Contains(Player.Filename,/Quad) + String.Contains(Player.Folderpath,Penteo)">4.1</value>
+		<value condition="String.Contains(Player.Folderpath,/Quad) + String.Contains(Player.Folderpath,Penteo)">4.1</value>
 		<value condition="String.Contains(Player.Folderpath,Quad) + !String.Contains(Player.Folderpath,Quad Penteo)">4.1</value>
 		<value condition="String.Contains(Player.Folderpath,/Quad)">Quad</value>
 		<value condition="String.IsEqual(MusicPlayer.Channels,5)">5.0</value>
