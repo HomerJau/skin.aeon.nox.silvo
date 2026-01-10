@@ -4,7 +4,10 @@
 	<match>one</match>
 	<group>none</group>
 	<order direction="descending">year</order>
-	<rule field="title" operator="is">
+        <rule field="title" operator="is">
+		<value>Anora</value>
+	</rule>
+        <rule field="title" operator="is">
 		<value>Oppenheimer</value>
 	</rule>
 	<rule field="title" operator="is">
@@ -32,7 +35,7 @@
 		<value>Spotlight</value>
 	</rule>
 	<rule field="title" operator="is">
-		<value>Birdman: or (The Unexpected Virtue of Ignorance)</value>
+		<value>Birdman or (The Unexpected Virtue of Ignorance)</value>
 	</rule>
 	<rule field="title" operator="is">
 		<value>12 Years a Slave</value>
@@ -152,7 +155,7 @@
 		<value>One Flew over the Cuckoo&apos;s Nest</value>
 	</rule>
 	<rule field="title" operator="is">
-		<value>The Godfather: Part II</value>
+		<value>The Godfather Part II</value>
 	</rule>
 	<rule field="title" operator="is">
 		<value>The Sting</value>
