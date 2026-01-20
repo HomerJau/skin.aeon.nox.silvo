@@ -12,6 +12,18 @@
 		<action>System.ExecWait("/usr/sbin/rebootfromnand")</action>
 		<action>Reboot()</action>
 	</override>
+	<override action="ShutDown()">
+        <action>Dialog.Close(all,true)</action>
+        <action>ShutDown()</action>
+    </override>
+	<override action="Reboot()">
+        <action>Dialog.Close(all,true)</action>
+        <action>Reboot()</action>
+    </override>
+	<override action="Suspend()">
+        <action>Dialog.Close(all,true)</action>
+        <action>Suspend()</action>
+    </override>
 	<override action="ActivateWindow(skinsettings)" group="buttonmenu">
 		<action>Dialog.Close(all,true)</action>
 		<action>::ACTION::</action>

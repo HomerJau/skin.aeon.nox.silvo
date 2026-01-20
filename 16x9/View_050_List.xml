@@ -15,8 +15,8 @@
 		<value  condition="String.IsEqual(ListItem.MusicCodec,eac3)">QQLogos/eac3.png</value>
 		<value  condition="String.IsEqual(ListItem.MusicCodec,dolbydigital)">QQLogos/dolbydigital.png</value>
 		<value  condition="String.IsEqual(ListItem.MusicCodec,ac3)">QQLogos/dolbydigital.png</value>
-		<value  condition="String.Contains(ListItem.FileNameAndPath,BDA) + String.IsEqual(ListItem.MusicCodec,pcm_s24le)">QQLogos/pcm.png</value>
-		<value  condition="String.Contains(ListItem.FileNameAndPath,BDA) + String.IsEqual(ListItem.MusicCodec,pcm_s16le)">QQLogos/pcm.png</value>		
+		<value  condition="String.Contains(ListItem.Folderpath,BDA) + String.IsEqual(ListItem.MusicCodec,pcm_s24le)">QQLogos/pcm.png</value>
+		<value  condition="String.Contains(ListItem.Folderpath,BDA) + String.IsEqual(ListItem.MusicCodec,pcm_s16le)">QQLogos/pcm.png</value>		
 		<!-- New FileNameAndPath Name Codecs-->
 		<value  condition="String.Contains(ListItem.FileNameAndPath,DVDA UM)">QQLogos/upmix.png</value>
 		<value  condition="String.Contains(ListItem.FileNameAndPath,SACD UM)">QQLogos/upmix.png</value>
@@ -52,8 +52,8 @@
 		<value  condition="String.Contains(ListItem.FileNameAndPath,DTSDVD)">QQLogos/dts.png</value>
 		<value  condition="String.Contains(ListItem.FileNameAndPath,Dolby DVD)">QQLogos/dolbydigital.png</value>
 		<value  condition="String.Contains(ListItem.FileNameAndPath,DTS DVD)">QQLogos/dts.png</value>
-        <value  condition="String.IsEqual(ListItem.MusicChannels,2) + String.IsEqual(ListItem.MusicBitsPerSample,24)">QQLogos/HiresAudio.png</value>
-        <value  condition="String.IsEqual(ListItem.MusicChannels,2) + String.IsEqual(ListItem.MusicBitsPerSample,16)">QQLogos/CDlogo.png</value>
+        	<value  condition="String.IsEqual(ListItem.MusicChannels,2) + String.IsEqual(ListItem.MusicBitsPerSample,24)">QQLogos/HiresAudio.png</value>
+        	<value  condition="String.IsEqual(ListItem.MusicChannels,2) + String.IsEqual(ListItem.MusicBitsPerSample,16)">QQLogos/CDlogo.png</value>
 		<value  condition="String.Contains(ListItem.FileNameAndPath,DSF)">QQLogos/DSDsmall.png</value>
 		<value  condition="String.Contains(ListItem.FileNameAndPath,.flac)">QQLogos/flac.png</value>
 		<value  condition="String.Contains(ListItem.FileNameAndPath,.dsf)">QQLogos/DSDsmall.png</value>

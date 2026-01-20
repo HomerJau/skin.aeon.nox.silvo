@@ -14,10 +14,12 @@
    		<value condition="String.IsEqual(MusicPlayer.Codec,eac3)">QQLogos/eac3.png</value>
    		<value condition="String.IsEqual(MusicPlayer.Codec,dolbydigital)">QQLogos/dolbydigital.png</value>
    		<value condition="String.IsEqual(MusicPlayer.Codec,ac3)">QQLogos/dolbydigital.png</value>
+		<value condition="String.Contains(Player.Folderpath,BDA) + String.IsEqual(MusicPlayer.Codec,pcm_s24le)">QQLogos/pcm.png</value>
+		<value condition="String.Contains(Player.Folderpath,BDA) + String.IsEqual(MusicPlayer.Codec,pcm_s16le)">QQLogos/pcm.png</value>		
    		<!-- New VideoPlayer Codecs -->
    		<value condition="String.IsEqual(VideoPlayer.AudioCodec,truehd_atmos)">QQLogos/dolbyatmos.png</value>
    		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)">QQLogos/atmos.png</value>
-   		<value condition="String.Contains(VideoPlayer.AudioCodec,dtshd_ma_x)">QQLogos/dtsx.png</value>
+   		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x)">QQLogos/dtsx.png</value>
    		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma)">QQLogos/dtshdma.png</value>
    		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_hra)">QQLogos/dtshd_hra.png</value>
    		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dts_96_24)">QQLogos/dts9624.png</value>
@@ -26,6 +28,8 @@
    		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3)">QQLogos/eac3.png</value>
    		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dolbydigital)">QQLogos/dolbydigital.png</value>
    		<value condition="String.IsEqual(VideoPlayer.AudioCodec,ac3)">QQLogos/dolbydigital.png</value>
+		<value condition="String.Contains(Player.Folderpath,BDA) + String.IsEqual(VideoPlayer.AudioCodec,pcm_s24le)">QQLogos/pcm.png</value>
+		<value condition="String.Contains(Player.Folderpath,BDA) + String.IsEqual(VideoPlayer.AudioCodec,pcm_s16le)">QQLogos/pcm.png</value>		
 		<!-- QQ FolderPath Codec Names -->
 		<value condition="String.Contains(Player.Folderpath,DVDA UM)">QQLogos/upmix.png</value>
 		<value condition="String.Contains(Player.Folderpath,SACD UM)">QQLogos/upmix.png</value>
@@ -73,13 +77,14 @@
 		<value condition="String.IsEqual(VideoPlayer.Channels,4)">Quad</value>
 		<value condition="String.IsEqual(MusicPlayer.Codec,eac3_ddp_atmos)">Atmos DD+</value>
   		<value condition="String.IsEqual(MusicPlayer.Codec,truehd_atmos)">Atmos THD</value>
-  		<value condition="String.Contains(MusicPlayer.Codec,dtshd_ma_x)">DTS:X</value>
+  		<value condition="String.IsEqual(MusicPlayer.Codec,dtshd_ma_x)">DTS:X</value>
   		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)">Atmos DD+</value>
   		<value condition="String.IsEqual(VideoPlayer.AudioCodec,truehd_atmos)">Atmos THD</value>
-  		<value condition="String.Contains(VideoPlayer.AudioCodec,dtshd_ma_x)">DTS:X</value>		
+  		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x)">DTS:X</value>		
 		<value condition="String.Contains(Player.Folderpath,/Quad) + String.Contains(Player.Folderpath,Penteo)">4.1</value>
 		<value condition="String.Contains(Player.Folderpath,Quad) + !String.Contains(Player.Folderpath,Quad Penteo)">4.1</value>
 		<value condition="String.Contains(Player.Folderpath,/Quad)">Quad</value>
+		<value condition="String.Contains(Player.Folderpath,Quad)">Quad</value>
 		<value condition="String.IsEqual(MusicPlayer.Channels,5)">5.0</value>
 		<value condition="String.IsEqual(MusicPlayer.Channels,6)">5.1</value>
 		<value condition="String.IsEqual(MusicPlayer.Channels,8)">7.1</value>
@@ -88,7 +93,7 @@
 		<value>$INFO[MusicPlayer.Channels]</value>
 	</variable>
 
-      <!-- QQKodi  - This is used to translate Channels to decriptions like 'Atmos', 'Quad' etc -->
+        <!-- QQKodi  - This is used to translate Channels to decriptions like 'Atmos', 'Quad' etc -->
 	<variable name="QQGetCodecFromFileNameAndPathvar">
         <value  condition="String.IsEqual(ListItem.MusicCodec,eac3_ddp_atmos)">Atmos DD+</value>
         <value  condition="String.IsEqual(ListItem.MusicCodec,truehd_atmos)">Atmos THD</value>
@@ -105,7 +110,7 @@
 		<value  condition="String.IsEqual(ListItem.MusicChannels,2)">Stereo</value>
 		<value  condition="String.IsEqual(ListItem.MusicChannels,1)">Mono</value>
 		<value>$INFO[ListItem.MusicCodec]</value>
-    </variable>
+        </variable>
   	<!-- End QQLogos -->
 	
 	<variable name="CustomSideMenuHeaderLabelVar">
